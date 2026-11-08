@@ -79,13 +79,13 @@ node seed.js
 
 ## 📸 Captures d'écran
 
-| Accueil                      | Recommandations IA             |
-| ---------------------------- | ------------------------------ |
-| ![Accueil](docs/accueil.png) | ![Matching](docs/matching.png) |
+| Accueil                                  | Recommandations IA                         |
+| ---------------------------------------- | ------------------------------------------ |
+| ![Accueil](docs/screenshots/accueil.png) | ![Matching](docs/screenshots/matching.png) |
 
-| Messagerie                   | Dashboard BI       |
-| ---------------------------- | ------------------ |
-| ![Chat](docs/messagerie.png) | ![BI](docs/bi.png) |
+| Messagerie                               | Dashboard BI                    |
+| ---------------------------------------- | ------------------------------- |
+| ![Chat](docs/screenshots/messagerie.png) | ![BI](docs//screenshots/bi.png) |
 
 ## 🔐 Sécurité
 
