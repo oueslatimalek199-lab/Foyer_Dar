@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import { inscrire } from "../services/etudiantService";
 
 function Inscription() {
-  const [formulaire, setFormulaire] = useState({ nom: "", email: "", motDePasse: "" });
+  const [formulaire, setFormulaire] = useState({
+  nom: "",
+  email: "",
+  motDePasse: "",
+  role: "etudiant"
+});
   const [message, setMessage] = useState("");
 
   const gererChangement = (e) => {
@@ -35,9 +40,22 @@ function Inscription() {
             <input name="email" type="email" value={formulaire.email} onChange={gererChangement} required />
           </div>
           <div className="field">
+  <label>Type de compte</label>
+  <select
+    name="role"
+    value={formulaire.role}
+    onChange={gererChangement}
+    required
+  >
+    <option value="etudiant">Étudiant</option>
+    <option value="annonceur">Annonceur / Propriétaire</option>
+  </select>
+</div>
+          <div className="field">
             <label>Mot de passe</label>
             <input name="motDePasse" type="password" value={formulaire.motDePasse} onChange={gererChangement} required />
           </div>
+          
           <button type="submit" className="btn btn-primary">S'inscrire</button>
         </form>
         {message && <p className="message">{message}</p>}

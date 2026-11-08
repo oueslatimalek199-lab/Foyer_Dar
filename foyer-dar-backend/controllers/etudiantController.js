@@ -11,7 +11,7 @@ const genererToken = (id, role) => jwt.sign({ id, role }, process.env.JWT_SECRET
 // @route POST /api/etudiants/inscription
 exports.inscrire = async (req, res) => {
   try {
-    const { nom, email, motDePasse, ville, budget } = req.body;
+const { nom, email, motDePasse, ville, budget, role } = req.body;
 
     const existe = await Etudiant.findOne({ email });
     if (existe) {
@@ -27,6 +27,7 @@ exports.inscrire = async (req, res) => {
       motDePasse: motDePasseHache,
       ville,
       budget,
+      role: role === "annonceur" ? "annonceur" : "etudiant",
     });
 
     res.json({

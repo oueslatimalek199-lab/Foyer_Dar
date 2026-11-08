@@ -20,8 +20,8 @@ const annonceSchema = new mongoose.Schema(
     ville: {
       type: String,
       required: true,
-      enum: ["Tunis Centre", "Ghazela", "Sousse", "Sfax", "Monastir"],
-    },
+      trim: true,
+},
     quartier: { type: String },
     proximiteFaculte: { type: String }, // ex: "5 min à pied de la FSEGS"
     prix: {

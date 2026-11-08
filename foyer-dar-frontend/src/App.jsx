@@ -17,6 +17,7 @@ import Conversations from "./pages/Conversations";
 import Conversation from "./pages/Conversation";
 import Admin from "./pages/Admin";
 import { compterNonLus } from "./services/messageService";
+import ModifierAnnonce from "./pages/ModifierAnnonce";
 
 function App() {
   const location = useLocation();
@@ -125,8 +126,8 @@ function App() {
           <Route path="/messages" element={<Conversations />} />
           <Route path="/messages/:autreId" element={<Conversation />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/modifier-annonce/:id" element={<ModifierAnnonce />} />
         </Routes>
-
         {!estAdmin && <ChatPopup />}
       </div>
     </ChatProvider>
